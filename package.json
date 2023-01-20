@@ -1,0 +1,25 @@
+{
+  "name": "battleship_game",
+  "version": "1.0.0",
+  "description": "",
+  "mode": "development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gruby9/Battleship_game.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gruby9/Battleship_game/issues"
+  },
+  "homepage": "https://github.com/Gruby9/Battleship_game#readme",
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}

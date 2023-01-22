@@ -12,5 +12,11 @@ test('if gameboard craates ships', () => {
     game.receiveAttack(1,1)
     game.receiveAttack(7,7)
     game.receiveAttack(7,5)
-    expect(game.receiveAttack(6,8)).toEqual(true);
+    game.receiveAttack(6,8)
+    game.ships[0].sunk = true
+    game.ships[1].sunk = true
+    game.ships[2].sunk = true
+    game.ships[4].sunk = true
+    game.ships[3].sunk = true
+    expect(game.checkShips()).toEqual(true);
 });

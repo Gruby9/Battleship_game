@@ -53,11 +53,20 @@ class Gameboard {
                     this.coors[n][i][1] == y) {
                         this.hitsMissed.pop()
                         this.ships[n].hit()
+                        this.ships[n].isSunk()
                         this.hitsInTarget.push([x, y])
                         return this.hitsMissed
                     }
             }
         }
+    }
+
+    checkShips() {
+        let count = 0
+        for ( let n = 0; n < this.ships.length; n++) {
+            if (this.ships[n].sunk === true) count++
+        }
+        if (count === 5) return 'player looses'
     }
 }
 

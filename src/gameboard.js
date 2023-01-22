@@ -4,7 +4,8 @@ class Gameboard {
 
     constructor(ships = [],fiveShip,fourShip,three1Ship,three2Ship,
         twoShip, fiveCoor = [], fourCoor = [], three1Coor = [], 
-        three2Coor = [], twoCoor = [], coors = [], takenHits = []) {
+        three2Coor = [], twoCoor = [], coors = [], hitsMissed = [], 
+        hitsInTarget = []) {
         this.ships = ships,
         this.fiveShip = fiveShip,
         this.fourShip = fourShip,
@@ -17,7 +18,8 @@ class Gameboard {
         // this.three2Coor = three2Coor,
         // this.twoCoor = twoCoor
         this.coors = coors,
-        this.takenHits = takenHits
+        this.hitsMissed = hitsMissed,
+        this.hitsInTarget = hitsInTarget
 
     }
 
@@ -44,13 +46,15 @@ class Gameboard {
     }
 
     receiveAttack(x, y) {    
-        this.takenHits.push([x,y])
+        this.hitsMissed.push([x, y])
         for ( let n = 0; n < this.coors.length; n++) {
             for ( let i = 0; i < this.coors[n].length; i++) {
                 if (this.coors[n][i][0] == x && 
                     this.coors[n][i][1] == y) {
+                        this.hitsMissed.pop()
                         this.ships[n].hit()
-                        return this.ships[n]
+                        this.hitsInTarget.push([x, y])
+                        return this.hitsMissed
                     }
             }
         }

@@ -9,5 +9,8 @@ beforeAll(() => {
 }); 
 
 test('if gameboard craates ships', () => {
+    game.receiveAttack(1,1)
+    game.receiveAttack(7,7)
+    game.receiveAttack(7,5)
     expect(game.receiveAttack(6,8)).toEqual(true);
 });

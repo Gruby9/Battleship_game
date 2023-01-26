@@ -119,6 +119,16 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/DOM.js":
+/*!********************!*\
+  !*** ./src/DOM.js ***!
+  \********************/
+/***/ (() => {
+
+eval("const grid = document.getElementsByClassName('grid')\nconst test = document.createElement('div')\ntest.innerHTML ='test'\ntest.append\n\n\n\n//# sourceURL=webpack://battleship_game/./src/DOM.js?");
+
+/***/ }),
+
 /***/ "./src/gameboard.js":
 /*!**************************!*\
   !*** ./src/gameboard.js ***!
@@ -136,7 +146,7 @@ eval("const Ship = __webpack_require__(/*! ./ship */ \"./src/ship.js\");\n\nclas
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.scss */ \"./src/style.scss\");\nconst Gameboard = __webpack_require__(/*! ./gameboard */ \"./src/gameboard.js\");\nconst Ship = __webpack_require__(/*! ./ship */ \"./src/ship.js\");\nconst Player = __webpack_require__(/*! ./player */ \"./src/player.js\")\n;\n\nconst game = new Gameboard\nconst player = new Player\ngame.createShips()\nplayer.generatePossibleMoves()\nconsole.log(game)\nplayer.lastAttack = [false, [3,3]]\nconsole.log(player.lastAttack)\nconsole.log(player.autoAttack())\n\n//# sourceURL=webpack://battleship_game/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.scss */ \"./src/style.scss\");\n/* harmony import */ var _DOM_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DOM.js */ \"./src/DOM.js\");\n/* harmony import */ var _DOM_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_DOM_js__WEBPACK_IMPORTED_MODULE_1__);\nconst Gameboard = __webpack_require__(/*! ./gameboard */ \"./src/gameboard.js\");\nconst Ship = __webpack_require__(/*! ./ship */ \"./src/ship.js\");\nconst Player = __webpack_require__(/*! ./player */ \"./src/player.js\")\n;\n\n\nconst grid = document.getElementsByClassName('grid')\n\nconst game = new Gameboard\nconst player = new Player\ngame.createShips()\nplayer.generatePossibleMoves()\nconsole.log(game)\nplayer.lastAttack = [false, [3,3]]\nconsole.log(player.lastAttack)\nconsole.log(player.autoAttack())\n\ngrid\n\n//# sourceURL=webpack://battleship_game/./src/index.js?");
 
 /***/ }),
 

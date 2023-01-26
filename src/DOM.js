@@ -1,2 +1,5 @@
-const grid = document.createElement('div')
-const innerGrid = document.createElement()
+const grid = document.getElementsByClassName('grid')
+const test = document.createElement('div')
+test.innerHTML ='test'
+test.append
+

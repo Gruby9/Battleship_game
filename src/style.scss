@@ -1,0 +1,14 @@
+body {
+    background-color: dimgray;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(10, 30px);
+    grid-template-rows: repeat(10, 30px);
+    gap: 2px;
+}
+
+.tile {
+    border: 1px solid black;
+}

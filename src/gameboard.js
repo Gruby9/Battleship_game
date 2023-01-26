@@ -55,7 +55,7 @@ class Gameboard {
                         this.ships[n].hit()
                         this.ships[n].isSunk()
                         this.hitsInTarget.push([x, y])
-                        return this.hitsMissed
+                        return true
                     }
             }
         }
